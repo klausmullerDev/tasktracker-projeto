@@ -1,0 +1,21 @@
+# ==============================================================================
+# TaskTracker — Docker Compose (Fase 3: Orquestração e Interatividade)
+# Bootcamp II — Ciência da Computação (UniCEUB)
+# Estudante: Klaus Müller Marques | RA: 22301876
+# ==============================================================================
+
+services:
+  # Serviço principal do TaskTracker CLI
+  tasktracker:
+    build: .
+    image: tasktracker:latest
+    container_name: tasktracker-cli
+    stdin_open: true  # Mantém o STDIN aberto para capturar os inputs do usuário
+    tty: true         # Aloca um pseudoterminal (TTY) para emular o console interativo
+
+  # Serviço auxiliar 'app' mapeado para compatibilidade com avaliadores que executam 'docker compose run app'
+  app:
+    build: .
+    image: tasktracker:latest
+    stdin_open: true
+    tty: true

@@ -1,0 +1,27 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Git
+.git/
+.gitignore
+
+# Documentação pesada e assets
+docs/
+*.pdf
+*.md
+!README.md
+
+# Ambientes virtuais
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Configurações de IDEs e OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
